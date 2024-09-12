@@ -1,0 +1,282 @@
+<!-- Used an Emmet abbreviation = html:5  -->
+
+<!-- Document Type -->
+<!DOCTYPE html>
+<!-- Language setting -->
+<html lang="en"> 
+
+<!-- head tag - meta data - data about the document - will be hidden -->
+<head>
+        <!-- LINKS CSS FILE WITH THE HTML TAG (WEEK 3 - VIDEO)-->
+        <link rel="stylesheet" href="style.css">
+        <!-- LINKS JAVASCRIPT TYPE: SCRIPT SRC -->
+        <script src="app.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+        rel="stylesheet">
+    <!-- Sets up the character set, this is the most common one "UTF-8" -->
+    <meta charset="UTF-8">
+    <!-- Autoscales the display dependant on the device 
+     - we want it to be resonsive on what it is displayed on e.g. phone, tablet, desktop view -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Changes title name on top of the page i.e. changes from 'document' to 'BrightBlog' -->       
+    <title>BrightBlogSite</title>
+</head>
+ 
+<!-- Depicts the actual content of the website e.g. decription, image, video (Will be displayed in the browser page)  -->
+<body>
+
+    <!-- content of header goes here, break up the tag i.e create gaps inbetween them acting like a sandwich-->
+     <header>
+        
+         <h1 id="logo" >BrightBlog</h1>
+         <!-- SHORTCUT! SHOWN BELOW 
+          nav>ul>li*3>a (a = anchor)
+         this creates the set template in a faster way
+         -->
+
+         <nav>
+         <!-- navigation // LIST WAY ol = ordered list (numeber), ul = unordered list (bullet point) --> 
+          <ul id="nav-ul">
+            <li>
+                <!-- Li = creates a hyperlink, add website inbetween speech marks -->
+                <a href="https://www.google.co.uk/" class="navbutton">Home</a>
+            </li>
+            <li>
+                <!-- Li = creates a hyperlink, add website inbetween speech marks -->
+                <a href="https://www.google.co.uk/" class="navbutton">About Us</a>
+            </li>
+            <li>
+                <!-- Li = creates a hyperlink, add website inbetween speech marks -->
+                <a href="https://www.google.co.uk/" class="navbutton">Contact</a>
+            </li>
+          </ul>
+         </nav>
+    </header>
+
+    <!-- Main Tag -->
+    <main>
+        <!-- Article Tag -->
+         <!-- 
+STRUCTURE 
+Header: 
+  Title
+  Author
+ Main area: 
+  contect of article
+ Footer: 
+  Extra Notes
+  -->
+  <div id="main-content">
+    <aside>
+    
+        <section>
+           <h4>Filter by Month</h4>
+          <nav>
+            <ul>
+                <li><a href=""></a>Filter for January</li>
+                <li><a href=""></a>Filter for February</li>
+                <li><a href=""></a>Filter for March</li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <h4>Filter by Category</h4>
+          <nav>
+              <ul>
+                  <li><a href="">Puppies</a></li>
+                  <li><a href="">Dogs</a></li>
+                  <li><a href="">Cats</a></li>
+                  <li><a href="">Hedgehogs</a></li>
+              </ul>
+          </nav>
+        </section>
+
+      </aside>
+       <div>
+        <article>
+            <header> 
+           <!-- Article's header goes here -->
+         <h2>Ten Amusing Facts about dogs</h2>
+         <h3>Read time: 5 mins</h3> 
+            </header>
+           <main>
+               <p>Some text about dogs!</p>
+               <!-- To get a new line use <p></p> -->
+               <p>Here is some extra text</p> 
+               <!-- lorem"number" adds a list of random words (emmet abbrev) -->
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste esse quibusdam dicta recusandae laboriosam culpa perferendis ducimus possimus natus commodi excepturi quasi saepe, corrupti illo, magnam aliquam deleniti maiores doloremque similique ratione dolor ut vitae. Minus voluptatem dolores quas impedit praesentium facere magnam veniam excepturi id labore blanditiis reiciendis, quae sunt sed aliquam quasi similique temporibus tenetur deserunt nulla, animi consectetur. Fuga sequi aliquid quibusdam, dignissimos sint praesentium illo nobis consectetur quas voluptatem asperiores natus excepturi odio veritatis officiis omnis incidunt? Vero consequatur eligendi, esse dolorem quos ipsa earum sit eveniet sequi placeat molestias incidunt velit doloribus nobis delectus dolor?
+               </p>
+              
+               <!-- Add a quote by using blockquore tag -->
+               <blockquote>
+                   <!-- cite tag makes writes something siteable -->
+                   </cite> "I love <a href="">puppies</a>!"- Jakob, 2024</cite>
+               </blockquote>
+    
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam sint veritatis, at iste neque voluptatem accusamus nisi doloremque labore dolorum dolores error qui cumque! Illo, dolor. Soluta consequuntur iure excepturi et velit magnam alias sit nulla a, rerum quia illum eaque voluptatum placeat tempore illo dolor libero! Quia, accusantium.</p>
+           </main>
+           <footer>
+           <h4>Author: Jakob San Juan</h4>
+           <!-- 100/100 : width/height, alt= allows a description of what the image is for those who are visually impaired -->
+           <img src="https://placebear.com/100/100" alt="A profile pic of a bear"> 
+           <img src="https://placebear.com/300/300" alt="A profile pic of a bear"> 
+           <img src="https://placebear.com/500/400" alt="A profile pic of a bear"> 
+           <h5>Last posted: 4/9/24</h5>
+           <!-- target="_blank" tag makes the url open on a new tab not on the same one! -->
+    <a href="https://www.brightnetwork.co.uk/dashboard/" target="_blank">Author's Profile</a>
+           </footer>
+       </article>
+      </div>
+  </div>
+
+  <!-- 
+          <section>
+             <h4>Filter by Month</h4>
+            <nav>
+              <ul>
+                  <li><a href=""></a>Filter for January</li>
+                  <li><a href=""></a>Filter for February</li>
+                  <li><a href=""></a>Filter for March</li>
+              </ul>
+            </nav>
+          </section>
+          <section>
+            <h4>Filter by Category</h4>
+            <nav>
+                <ul>
+                    <li><a href="">Puppies</a></li>
+                    <li><a href="">Dogs</a></li>
+                    <li><a href="">Cats</a></li>
+                    <li><a href="">Hedgehogs</a></li>
+                </ul>
+            </nav>
+          </section>
+
+        </aside>
+         -->
+
+        <!-- <hr> tag adds a horizontal line on the page -->
+        <hr>
+        <h2>Sign up for newsletter!</h2>
+         <form action="" method="">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+           
+            <!-- <br> break tag created a new line -->
+            <br>
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="Email">
+
+            <br>
+            <label for="favourite_animal">Favourite Animal:</label>
+            <input type="radio" name="favourite_animal" id="dog" value="dog">
+            <label for="dog">Dog</label>
+            <input type="radio" name="favourite_animal" id="cat" value="cat">
+            <label for="cat">Cat</label>
+            <input type="radio" name="favourite_animal" id="hedgehog" value="hedgehog">
+            <label for="hedgehog">Hedgehog</label>
+
+            <br>
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                   <option value="england">England</option>
+                   <option value="scotland">Scotland</option>
+                   <option value="wales">Wales</option>
+                   <option value="northern_ireland">Northern Ireland</option>
+            </select>
+
+            <br>
+            <label for="bio">Biography</label>
+            <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+            
+            <br> 
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Subscribe for our newsletter!</label>
+
+            <br>
+            <input type="submit" value="Send!">
+
+       
+         </form>
+         <hr>
+    </main> 
+
+    <footer>
+      <h2>BrightBlogSite</h2>
+      <section>
+        <nav>
+            <ul id="footer-ul">
+                <div>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Careers</a></li>
+                </div>
+
+                <div>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </div>
+            </ul>
+        </nav>
+      </section>
+
+    </footer>
+
+</body>
+
+
+
+
+
+
+<!-- SHORTCUT VERSION// MY VERSION-->
+<body>
+    <header>
+        <!-- content of header goes here -->
+        <h1>Gyrate</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="">Inventory</a></li>
+                <li><a href="">Our Story</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Socials</a></li>  
+                <!-- Make sure text is written in the correct format before the </a> -->
+            </ul>
+        </nav>
+      
+   </header>
+   <main>
+       <!-- main content goes here -->
+   </main> 
+   <footer>
+       <!-- footer goes here -->
+   </footer>
+</body>
+
+</html>
+
+<!-- Notes 
+  1. Self Closing Tag e.g. <meta charset = "UTF-8" ; Pair Tag e.g. <title>Document</title>
+  2. Space the lines out (Never write everything on one line)
+  3. Indentations are important (spaces) - trust VS code to so this automatically
+  4. Only have 1 nesting i.e. in terms of nav>ul>li
+
+ 
+
+
+
+
+
+
+--> 
