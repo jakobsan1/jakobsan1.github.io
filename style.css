@@ -11,7 +11,7 @@ body {
 /* FOR ID SELECTOR USE # NOTATION */
 #logo {
     /* To adjust the position of the header */
-    /* margin: 10px 20 px 60px 150px */
+    /* margin: 10px 20px 60px 150px */
       /* top right bottom left */
     margin: 0px;
 
@@ -31,6 +31,16 @@ body {
     -1px -1px 0 black;
 }
 
+.ingredients-header {
+    margin-top: 10px; /* Increase this value to move the text lower */
+    padding-top: 20px; /* Alternative option */
+    margin: 0px 35px 10px
+  }  
+
+
+
+
+
 cite > a {
     /* inline-block increases the clickable space to open the site */
     display: inline-block;
@@ -47,7 +57,7 @@ ul {
 /* CSS Selector: there are many header tags so how do we target certain ones? Indicate you only want the direct descendant. */
 /* This is indicating the Header tag DIRECTLY under the body tag (use > symbol) */
 body > header {
-    background-color: orange;
+    background-color: rgb(108, 70, 43);
     color: white;
     display:flex;
     height: 10vh;
@@ -60,7 +70,7 @@ display: flex;
 }
 
 #nav-ul > li {
-padding: 8px;
+padding: 10px;
 margin: 16px;
 }
 
@@ -73,7 +83,7 @@ body> header > nav > ul {
 .navbutton {
     color: white;
     text-decoration: none;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid white;
     border-radius:10%;
 }
@@ -101,27 +111,37 @@ h2 {
     text-align: center;
 }
 
+
 body > footer {
-    background-color: rgb(0, 162, 255);
+    padding: 10px;
+    background-color: rgb(108, 70, 43);
+    color: white;
     display: flex;
+    justify-content:space-between;
+    font-family: "Fredoka One", sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow:
+    1px 1px 0 black,
+    -1px 1px 0 black,
+    1px -1px 0 black,
+    -1px -1px 0 black;
 }
+
+.no-bullets {
+list-style-type: none;
+}
+
+.white-link {
+    color: white;
+    text-decoration: none; /* Optional: Removes underline */
+  }
+  
+  .white-link:hover {
+    color: lightgray; /* Optional: Change color on hover */
+  }
+  
 
 /* border radius increases side curvature */
 img {
-    border-radius: 60%;
+    border-radius: 5%;
 }
-
-#footer-ul {
-    display: flex;
-    list-style: none;
-}
-
-#footer-ul > div > li {
-    margin-left: 12px;
-}
-
-#footer-ul > div > li > a {
-    text-decoration: none;
-    color: white;
-}
- 
