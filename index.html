@@ -1,231 +1,166 @@
-<!-- Used an Emmet abbreviation = html:5  -->
+<!-- MEng Individual Project - Predictive Maintenance ROI Calculator, 20289154, Jakob San Juan -->
 
-<!-- Document Type -->
 <!DOCTYPE html>
-<!-- Language setting -->
-<html lang="en"> 
+<html lang="en">
 
-<!-- head tag - meta data - data about the document - will be hidden -->
 <head>
-        <!-- LINKS CSS FILE WITH THE HTML TAG (WEEK 3 - VIDEO)-->
-        <link rel="stylesheet" href="style.css">
-        <!-- LINKS JAVASCRIPT TYPE: SCRIPT SRC -->
-        <script src="app.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
-        rel="stylesheet">
-    <!-- Sets up the character set, this is the most common one "UTF-8" -->
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <!-- Autoscales the display dependant on the device 
-     - we want it to be resonsive on what it is displayed on e.g. phone, tablet, desktop view -->    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Changes title name on top of the page i.e. changes from 'document' to 'BrightBlog' -->       
-    <title>My Own Website</title>
+    <title>Predictive Maintenance ROI Calculator</title>
 </head>
- 
-<!-- Depicts the actual content of the website e.g. decription, image, video (Will be displayed in the browser page)  -->
+
 <body>
-
-    <!-- content of header goes here, break up the tag i.e create gaps inbetween them acting like a sandwich-->
-     <header>
-        
-         <h1 id="logo" >Choco Chip Cookie</h1>
-         <!-- SHORTCUT! SHOWN BELOW 
-          nav>ul>li*3>a (a = anchor)
-         this creates the set template in a faster way
-         -->
-
-         <nav>
-         <!-- navigation // LIST WAY ol = ordered list (numeber), ul = unordered list (bullet point) --> 
-          <ul id="nav-ul">
-            <li>
-                <!-- Li = creates a hyperlink, add website inbetween speech marks -->
-                <a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="navbutton">Home</a>
-            </li>
-            <li>
-                <!-- Li = creates a hyperlink, add website inbetween speech marks -->
-                <a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="navbutton">Our Story</a>
-            </li>
-            <li>
-                <!-- Li = creates a hyperlink, add website inbetween speech marks -->
-                <a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="navbutton">Contact</a>
-            </li>
-          </ul>
-         </nav>
+    <header>
+        <h1 id="title">Evaluating the return on investment of using Predictive Maintenance in a manufacturing facility</h1>
     </header>
 
-    <!-- Main Tag -->
-    <main>
-        <!-- Article Tag -->
-         <!-- 
-STRUCTURE 
-Header: 
-  Title
-  Author
- Main area: 
-  contect of article
- Footer: 
-  Extra Notes
-  -->
-  <div id="main-content">
-    <aside>
-    
-        <section>
-           <h3 class="ingredients-header">Ingredients for 12 cookies:</h3>
-          <nav>
-            <ul>
-                <li><a href=""></a>1/2 cup granulated sugar(100 g)</li>
-                <li><a href=""></a>3/4 cup brown sugar(165 g), packed</li>
-                <li><a href=""></a>1 teaspoon salt</li>
-                <li><a href=""></a>1/2 cup unsalted butter(115 g), melted</li>
-                <li><a href=""></a>1 large egg</li>
-                <li><a href=""></a>1 1/4 cups all-purpose flour(155 g)</li>
-                <li><a href=""></a>1/2 teaspoon baking soda</li>
-                <li><a href=""></a>4 oz milk or semi-sweet chocolate chunks(110 g)</li>
-                <li><a href=""></a>4 oz dark chocolate chunk(110 g), or your preference</li>
-            </ul>
-        </section>
-
-      </aside>
-       <div>
-        <article>
-            <header> 
-           <!-- Article's header goes here -->
-         <h2>Cooking Instructions</h2>
-         <h3>Read time: 5 mins</h3> 
-            </header>
-           <main>
-               <p>1. In a large bowl, whisk together the sugars, salt, and butter until a paste forms with no lumps.</p>
-               <!-- To get a new line use <p></p> -->
-               <p>2. Whisk in the egg and vanilla, beating until light ribbons fall off the whisk and remain for a short while before falling back into the mixture.</p> 
-               <!-- lorem"number" adds a list of random words (emmet abbrev) -->
-               <p>3. Sift in the flour and baking soda, then fold the mixture with a spatula (Be careful not to overmix, which would cause the gluten in the flour to toughen resulting in cakier cookies). </p>
-               <p>4. Fold in the chocolate chunks, then chill the dough for at least 30 minutes. For a more intense toffee-like flavor and deeper color, chill the dough overnight. The longer the dough rests, the more complex its flavor will be.</p>
-               <p>5. Preheat oven to 350°F (180°C). Line a baking sheet with parchment paper.</p>
-               <p>6. Scoop the dough with an ice-cream scoop onto a parchment paper-lined baking sheet, leaving at least 4 inches (10 cm) of space between cookies and 2 inches (5 cm) of space from the edges of the pan so that the cookies can spread evenly.</p>
-               <p>7. Bake for 12-15 minutes, until the edges have started to barely brown.</p>
-               <p>8. Cool completely before serving.</p>
-               <p>9. Enjoy!</p>
-             
-              
-           </main>
-           <footer>
-           <h4>Recipe Author: Jakob San Juan</h4>
-           <!-- 100/100 : width/height, alt= allows a description of what the image is for those who are visually impaired -->
-           <img src="https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/tips/88119cc8e26d430eaf3dee65abb2dc9a.jpeg?downsize=180:*&output-format=auto&output-quality=auto" alt="A chocolate chip cookie"> 
-           <img src="https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/tips/823bd0ca45404ea3b800dc8294ea790b.jpeg?downsize=180:*&output-format=auto&output-quality=auto" alt="A chocolate chip cookie"> 
-           <img src="https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/tips/8e8b20bc19ec4b2187c8e51e1ff48ad4.jpeg?downsize=180:*&output-format=auto&output-quality=auto" alt="A chocolate chip cookie"> 
-
-           </footer>
-       </article>
-      </div>
-  </div>
-
-  <!-- 
-          <section>
-             <h4>Filter by Month</h4>
-            <nav>
-              <ul>
-                  <li><a href=""></a>Filter for January</li>
-                  <li><a href=""></a>Filter for February</li>
-                  <li><a href=""></a>Filter for March</li>
-              </ul>
-            </nav>
-          </section>
-          <section>
-            <h4>Filter by Category</h4>
-            <nav>
-                <ul>
-                    <li><a href="">Puppies</a></li>
-                    <li><a href="">Dogs</a></li>
-                    <li><a href="">Cats</a></li>
-                    <li><a href="">Hedgehogs</a></li>
-                </ul>
-            </nav>
-          </section>
-
-        </aside>
-         -->
-
-        <!-- <hr> tag adds a horizontal line on the page -->
-        <hr>
-        <h2>Send us pictures of your cookie!</h2>
-         <form action="" method="">
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
-           
-            <!-- <br> break tag created a new line -->
-            <br>
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
-
-            <br>
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email">
-
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="Email">
-
-            <br>
-            <label for="favourite_animal">Favourite type of Cookie:</label>
-            <input type="radio" name="favourite_animal" id="dog" value="dog">
-            <label for="dog">Chocolate</label>
-            <input type="radio" name="favourite_animal" id="cat" value="cat">
-            <label for="cat">Fruit</label>
-            <input type="radio" name="favourite_animal" id="hedgehog" value="hedgehog">
-            <label for="hedgehog">Nuts</label>
-
-            <br>
-            <label for="country">Country:</label>
-            <select name="country" id="country">
-                   <option value="england">England</option>
-                   <option value="scotland">Scotland</option>
-                   <option value="wales">Wales</option>
-                   <option value="northern_ireland">Northern Ireland</option>
-            </select>
-
-            <br>
-            <label for="bio">Tell us how your cookie tasted!</label>
-            <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
-            
-            <br> 
-            <input type="checkbox" id="subscribe" name="subscribe">
-            <label for="subscribe">Subscribe for Weekly Cookie Recipes!</label>
-
-            <br>
-            <input type="submit" value="Send!">
-
-       
-         </form>
-         <hr>
-    </main> 
-
-</body>
-
-<!-- SHORTCUT VERSION// MY VERSION-->
-<body>
-    <footer>
-        <!-- content of header goes here -->
-        <h1>Choco Chip Cookie</h1>
+    <div class="header">
+        <h1>What is Predictive Maintenance?</h1>
+        Predictive Maintenance (PdM) is a proactive approach to equipment maintenance that leverages real-time data,
+        machine learning, and predictive analytics to anticipate equipment failures before they occur. Unlike traditional
+        maintenance strategies, which are based on fixed schedules or reactive responses, Predictive Maintenance
+        optimises repair schedules, reduces costs, and minimises downtime by identifying potential issues before they
+        escalate into failures.
+        <br>
+        <h1>How does Predictive Maintenance work?</h1>
         
-        <nav>
-            <ul class="no-bullets">
-                <li><a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="white-link">Other Recipes</a></li>
-                <li><a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="white-link">Our Story</a></li>
-                <li><a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="white-link">Contact</a></li>
-                <li><a href="https://www.brightnetwork.co.uk/bright-network-events/couch-to-coder-2024" class="white-link">Socials</a></li>  
-                <!-- Make sure text is written in the correct format before the </a> -->
-            </ul>
-        </nav>
-      
+        Predictive Maintenance is data-driven, using real-time monitoring of machines to anticipate and prevent failures before they happen.
+        <br><br>
+        The process follows a structured workflow:
+        <br><br>
+        1. Establish Conditional Baselines:
+        Define normal operating conditions for equipment (e.g. temperature, pressure, vibration, power wattage, oil levels)
+        <br><br>
+        2. Install Condition Monitoring Sensors: 
+        IoT sensors continuously track machine performance and detect anomalies.
+        <br><br>
+        3. Collect Conditional Data:
+        Sensor data is sent to a centralised system or cloud for real-time analysis
+        <br><br>
+        4. Identify Baseline Breaches:
+        Advanced algorithms detect deviations from normal conditions, predicting potential failures
+        <br><br>
+        5. Create Work Order:
+        Once a fault is detected, a maintenance request is automatically generated
+        <br><br>
+        6. Perform Maintenance:
+        Maintenance teams intervene before failure occurs, minimising downtime
+        <br><br>
+        7. Repeat PdM Cycle 
+        Continuous monitoring ensures ongoing optimisation and reliability
+        <br><br>
+        By predicting potential failures in advance, companies can schedule maintenance at the most optimal time. This approach is more efficient than reactive maintenance (fixing equipment only after it breaks) or preventive maintenance (servicing equipment at regular intervals regardless of its condition).
+
+
+    </div>
+
+    <section class="instructions-section">
+        <h2>Instructions</h2>
+        <p>Step 1: Enter all required data in the input fields.</p>
+        <p>Step 2: Click the "Calculate ROI" button to see the results.</p>
+        <p>Step 3: Review the detailed breakdown of your ROI in the results section.</p>
+    </section>
+
+    <section class="expansion-section">
+        <h2>Expansion on the Results</h2>
+        <p>The results will show a detailed breakdown of the predicted ROI based on your inputs. This includes individual
+            calculations for cost savings, efficiency improvements, and time saved.</p>
+        <p>Use the results to evaluate the financial impact of adopting predictive maintenance in your manufacturing
+            facility.</p>
+    </section>
+
+    <main class="main-container">
+        <div class="calculator-box">
+            <h2>Enter Your Data</h2>
+            <form id="calculator-form" onsubmit="return false;">
+
+
+                <!-- Input 1: Maintenance Type (Radio Buttons) -->
+
+  <fieldset class="maintenance-fieldset">
+    <legend class="maintenance-legend">Current Type of Maintenance:</legend>
+    <div class="maintenance-options">
+      <label class="maintenance-option">
+        <div class="maintenance-label">Reactive Maintenance</div>
+        <input type="radio" name="maintenanceType" id="maintenanceReactive" value="Reactive">
+      </label>
+      <label class="maintenance-option">
+        <div class="maintenance-label">Preventive Maintenance</div>
+        <input type="radio" name="maintenanceType" id="maintenancePreventive" value="Preventive">
+      </label>
+    </div>
+  </fieldset>
+     
+                <label for="input2">Choose an Industry:
+                    <span title="Used to estimate industry-wide average cost of downtime per hour">
+                </label>
+                <select id="input2" style="width: 90%; padding: 12px; font-size: 16px; border: 1px solid #ddd; border-radius: 6px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 15px;">
+                    <option value="2300000">Automotive</option>
+                    <option value="260000">Food and Beverage</option>
+                    <option value="38695">FMCG</option>
+                    <option value="270000">Heavy</option>
+                    <option value="100000">Oil and Gas</option>
+                </select>
+                
+
+                <label for="input3">Average cost of downtime per hour:</label>
+                <input type="number" id="input3" required>
+
+                <label for="input4">Hours of Planned Downtime per month:</label>
+                <input type="number" id="input4" required>
+
+                <label for="input5">Average number of Planned Downtime events per month:</label>
+                <input type="number" id="input5" required>
+
+                <label for="input6">Hours of Unplanned Downtime per month:</label>
+                <input type="number" id="input6" required>
+
+                <label for="input7">Average number of Unplanned Downtime events per month:</label>
+                <input type="number" id="input7" required>
+
+                <label for="input8">Number of Maintenance Staff:</label>
+                <input type="number" id="input8" required>
+
+                <label for="input9">Average hourly cost per Maintenance Staff:</label>
+                <input type="number" id="input9" required>
+
+                <label for="input10">Number of Assets:</label>
+                <input type="number" id="input10" required>
+
+                <label for="input11">Annual cost of maintenance/servicing per asset:</label>
+                <input type="number" id="input11" required>
+
+                <button onclick="calculateROI()">Calculate ROI</button>
+            </form>
+        </div>
+
+        <div class="results-box">
+            <h2>Results</h2>
+            <p>Hours of Unplanned Downtime per year: <span id="output1">0</span></p>
+            <p>Average Industry cost of downtime per year: <span id="output2">0</span></p>
+            <p>Your Financial Loss due to Unplanned Downtime per year: <span id="output3">0</span></p>
+            <p>Cost of Planned Maintenance per hour: <span id="output4">0</span></p>
+            <p>Cost of Planned Maintenance per year: <span id="output5">0</span></p>
+            <p>Current Annual Maintenance Costs (Planned + Unplanned): <span id="output6">0</span></p>
+            <p>New Annual Maintenance Costs with Predictive Maintenance: <span id="output7">0</span></p>
+            <p>Total Annual Financial Savings: <span id="output8">0</span></p>
+            <p>Number of Hours Saved per Year: <span id="output9">0</span></p>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <p><strong>Jakob San Juan</strong> | Student ID: 20289154 | Email: efyjs13@nottingham.ac.uk</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
 
-<!-- Notes 
-  1. Self Closing Tag e.g. <meta charset = "UTF-8" ; Pair Tag e.g. <title>Document</title>
-  2. Space the lines out (Never write everything on one line)
-  3. Indentations are important (spaces) - trust VS code to so this automatically
-  4. Only have 1 nesting i.e. in terms of nav>ul>li
---> 
+    
+
+
