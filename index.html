@@ -1,32 +1,48 @@
 <!-- MEng Individual Project - Predictive Maintenance ROI Calculator, 20289154, Jakob San Juan -->
 
+<!-- Main HTML structure for the Predictive Maintenance ROI Calculator -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Link to external stylesheet for styling -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Link to external JavaScript file for functionality -->
     <script src="app.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- Basic metadata to support different devices -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Webpage title shown on the browser tab -->
     <title>Predictive Maintenance ROI Calculator</title>
+
+    <!-- Chart.js library used to create the bar chart for cost comparison -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+    <!-- Main header section containing the project title -->
     <header>
         <h1 id="title">Evaluating the return on investment of using Predictive Maintenance in a manufacturing facility</h1>
     </header>
 
+        <!-- Introduction/explanation of Predictive Maintenance -->
     <div class="header">
         <h1>What is Predictive Maintenance?</h1>
+
+         <!-- This paragraph gives background about PdM, how it works, and its benefits -->
         Predictive Maintenance (PdM) is a proactive approach to equipment maintenance that leverages real-time data,
         machine learning, and predictive analytics to anticipate equipment failures before they occur. Unlike traditional
-        maintenance strategies, which are based on fixed schedules or reactive responses, Predictive Maintenance
+        maintenance strategies, which are based on fixed schedules or reactive responses, predictive maintenance
         optimises repair schedules, reduces costs, and minimises downtime by identifying potential issues before they
         escalate into failures.
         <br>
+
+            <!-- Workflow steps to explain how PdM is implemented in practice -->
         <h1>How does Predictive Maintenance work?</h1>
-        
+
         Predictive Maintenance is data-driven, using real-time monitoring of machines to anticipate and prevent failures before they happen.
         <br><br>
         The process follows a structured workflow:
@@ -35,7 +51,7 @@
         Define normal operating conditions for equipment (e.g. temperature, pressure, vibration, power wattage, oil levels)
         <br><br>
         2. Install Condition Monitoring Sensors: 
-        IoT sensors continuously track machine performance and detect anomalies.
+        IoT sensors continuously track machine performance and detect anomalies
         <br><br>
         3. Collect Conditional Data:
         Sensor data is sent to a centralised system or cloud for real-time analysis
@@ -49,118 +65,299 @@
         6. Perform Maintenance:
         Maintenance teams intervene before failure occurs, minimising downtime
         <br><br>
-        7. Repeat PdM Cycle 
-        Continuous monitoring ensures ongoing optimisation and reliability
+        7. Repeat PdM cycle continuous monitoring ensures ongoing optimisation and reliability
         <br><br>
         By predicting potential failures in advance, companies can schedule maintenance at the most optimal time. This approach is more efficient than reactive maintenance (fixing equipment only after it breaks) or preventive maintenance (servicing equipment at regular intervals regardless of its condition).
 
-
     </div>
 
-    <section class="instructions-section">
-        <h2>Instructions</h2>
-        <p>Step 1: Enter all required data in the input fields.</p>
-        <p>Step 2: Click the "Calculate ROI" button to see the results.</p>
-        <p>Step 3: Review the detailed breakdown of your ROI in the results section.</p>
-    </section>
+       <!-- Section to guide users through using the calculator -->
+       <section class="instructions-section">
+       <h2> Instructions</h2>
+        <p>Step 1: Fill in all the required input fields with accurate data.</p>
+        <p>Step 2: Click the "Calculate ROI" button to generate your results.</p>
+        <p>Step 3: Review your personalised results in the section below, including financial savings and efficiency improvements.</p>
+        <p>Helpful Tip: Hover over the small ‘i’ icons next to each input and output to view definitions. These tooltips explain what each number represents and how it contributes to your ROI. This will help you better understand where your costs come from and how predictive maintenance could reduce them.</p>
+      </section>
 
+      <!-- Additional explanation about what the results mean -->
     <section class="expansion-section">
-        <h2>Expansion on the Results</h2>
-        <p>The results will show a detailed breakdown of the predicted ROI based on your inputs. This includes individual
-            calculations for cost savings, efficiency improvements, and time saved.</p>
-        <p>Use the results to evaluate the financial impact of adopting predictive maintenance in your manufacturing
-            facility.</p>
+        <h2>Understanding your Results</h2>
+        <p>After clicking Calculate ROI, the tool will display a detailed breakdown of your projected return on investment. Each result is calculated using your inputs to show:</p>
+        <p>- Total downtime and cost savings</p>
+        <p>- Improved efficiency</p>
+        <p>- Time saved through predictive maintenance</p>
+        <p>These results are designed to help you make informed decisions about adopting predictive maintenance in your manufacturing facility.</p>
     </section>
 
+    <!-- The main interactive section of the calculator -->
     <main class="main-container">
-        <div class="calculator-box">
-            <h2>Enter Your Data</h2>
-            <form id="calculator-form" onsubmit="return false;">
+
+      <!-- The left column: input form -->
+      <div class="calculator-box">
+          <h2>Enter Your Data</h2>
+
+          <!-- Form to enter inputs for the calculator. 'onsubmit' is prevented as calculations happen via JavaScript -->
+          <form id="calculator-form" onsubmit="return false;">
 
 
-                <!-- Input 1: Maintenance Type (Radio Buttons) -->
+              <!-- Maintenance type selection using radio buttons -->
+              <fieldset class="maintenance-fieldset">
+                  <legend class="maintenance-legend">
+                      Current Type of Maintenance:
 
-  <fieldset class="maintenance-fieldset">
-    <legend class="maintenance-legend">Current Type of Maintenance:</legend>
-    <div class="maintenance-options">
-      <label class="maintenance-option">
-        <div class="maintenance-label">Reactive Maintenance</div>
-        <input type="radio" name="maintenanceType" id="maintenanceReactive" value="Reactive">
-      </label>
-      <label class="maintenance-option">
-        <div class="maintenance-label">Preventive Maintenance</div>
-        <input type="radio" name="maintenanceType" id="maintenancePreventive" value="Preventive">
-      </label>
-    </div>
-  </fieldset>
-     
-                <label for="input2">Choose an Industry:
-                    <span title="Used to estimate industry-wide average cost of downtime per hour">
-                </label>
-                <select id="input2" style="width: 90%; padding: 12px; font-size: 16px; border: 1px solid #ddd; border-radius: 6px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 15px;">
-                    <option value="2300000">Automotive</option>
-                    <option value="260000">Food and Beverage</option>
-                    <option value="38695">FMCG</option>
-                    <option value="270000">Heavy</option>
-                    <option value="100000">Oil and Gas</option>
-                </select>
-                
+                      <!-- Tooltip info icon for user guidance -->
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">Specifies the existing maintenance strategy. 'Reactive' means fixing equipment after it fails, while 'Preventive' involves scheduled maintenance to prevent failures.</span>
+                      </span>
+                  </legend>
+                  <div class="maintenance-options">
 
-                <label for="input3">Average cost of downtime per hour:</label>
-                <input type="number" id="input3" required>
+                      <!-- Each option has a label and a radio button -->
+                      <label class="maintenance-option">
+                          <div class="maintenance-label">Reactive Maintenance</div>
+                          <input type="radio" name="maintenanceType" id="maintenanceReactive" value="Reactive">
+                      </label>
+                      <label class="maintenance-option">
+                          <div class="maintenance-label">Preventive Maintenance</div>
+                          <input type="radio" name="maintenanceType" id="maintenancePreventive" value="Preventive">
+                      </label>
+                  </div>
+              </fieldset>
 
-                <label for="input4">Hours of Planned Downtime per month:</label>
-                <input type="number" id="input4" required>
+              <!-- Each label/input pair represents a user input field, with hover tooltips for guidance -->
+              <!-- Input 2 - Industry Type Dropdown -->
+              <label for="input2">
+                  1. Choose an Industry:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">Select the industry to estimate the average cost of downtime per hour based on industry standards (e.g., Automotive, Oil and Gas).</span>
+                  </span>
+              </label>
+              <select id="input2">
+                  <option value="2300000">Automotive</option>
+                  <option value="260000">Food and Beverage</option>
+                  <option value="38695">FMCG</option>
+                  <option value="270000">Heavy</option>
+                  <option value="100000">Oil and Gas</option>
+              </select>
 
-                <label for="input5">Average number of Planned Downtime events per month:</label>
-                <input type="number" id="input5" required>
+              <!-- All the following inputs accept numeric values and help calculate ROI -->
+              <!-- Each has a descriptive label and a tooltip explaining what it is used for -->
+              <label for="input3">
+                  2. Average cost of downtime per hour (£ / hour):
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The financial cost incurred per hour when equipment is not operational due to maintenance or failures.</span>
+                  </span>
+              </label>
 
-                <label for="input6">Hours of Unplanned Downtime per month:</label>
-                <input type="number" id="input6" required>
+              <input type="number" id="input3" required>
+              <label for="input4">
+                  3. Hours of Planned Downtime per month:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">Total hours per month that equipment is intentionally stopped for scheduled maintenance.</span>
+                  </span>
+              </label>
 
-                <label for="input7">Average number of Unplanned Downtime events per month:</label>
-                <input type="number" id="input7" required>
+              <input type="number" id="input4" required>
+              <label for="input5">
+                  4. Number of Planned Downtime Events per month:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The average number of scheduled maintenance events you expect monthly.</span>
+                  </span>
+              </label>
 
-                <label for="input8">Number of Maintenance Staff:</label>
-                <input type="number" id="input8" required>
+              <input type="number" id="input5" required>
+              <label for="input6">
+                  5. Hours of Unplanned Downtime per month:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">Total hours per month that equipment is unexpectedly stopped due to failures or breakdowns.</span>
+                  </span>
+              </label>
 
-                <label for="input9">Average hourly cost per Maintenance Staff:</label>
-                <input type="number" id="input9" required>
+              <input type="number" id="input6" required>
+              <label for="input7">
+                  6. Number of Unplanned Downtime Events per month:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The average number of unexpected equipment failures or breakdowns per month.</span>
+                  </span>
+              </label>
 
-                <label for="input10">Number of Assets:</label>
-                <input type="number" id="input10" required>
+              <input type="number" id="input7" required>
+              <label for="input8">
+                  7. Number of Maintenance Staff:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The total number of staff members dedicated to maintenance tasks.</span>
+                  </span>
+              </label>
 
-                <label for="input11">Annual cost of maintenance/servicing per asset:</label>
-                <input type="number" id="input11" required>
+              <input type="number" id="input8" required>
+              <label for="input9">
+                  8. Average hourly cost per Maintenance Staff (£ / hour):
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The average cost per hour for each maintenance staff member, including wages and benefits.</span>
+                  </span>
+              </label>
 
-                <button onclick="calculateROI()">Calculate ROI</button>
-            </form>
-        </div>
+              <input type="number" id="input9" required>
+              <label for="input10">
+                  9. Number of Assets:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The total number of equipment or machines being monitored and maintained.</span>
+                  </span>
+              </label>
 
-        <div class="results-box">
-            <h2>Results</h2>
-            <p>Hours of Unplanned Downtime per year: <span id="output1">0</span></p>
-            <p>Average Industry cost of downtime per year: <span id="output2">0</span></p>
-            <p>Your Financial Loss due to Unplanned Downtime per year: <span id="output3">0</span></p>
-            <p>Cost of Planned Maintenance per hour: <span id="output4">0</span></p>
-            <p>Cost of Planned Maintenance per year: <span id="output5">0</span></p>
-            <p>Current Annual Maintenance Costs (Planned + Unplanned): <span id="output6">0</span></p>
-            <p>New Annual Maintenance Costs with Predictive Maintenance: <span id="output7">0</span></p>
-            <p>Total Annual Financial Savings: <span id="output8">0</span></p>
-            <p>Number of Hours Saved per Year: <span id="output9">0</span></p>
-        </div>
-    </main>
+              <input type="number" id="input10" required>
+              <label for="input11">
+                  10. Annual cost of maintenance/servicing per asset:
+                  <span class="tooltip">
+                      <span class="tooltip-icon">i</span>
+                      <span class="tooltiptext">The average yearly cost to maintain or service each individual asset, including parts and labor.</span>
+                  </span>
+              </label>
+              <input type="number" id="input11" required>
+
+                 <!-- Buttons to calculate or reset the form -->
+              <div class="button-group">
+                  <button type="button" onclick="calculateROI()">Calculate ROI</button>
+                  <button type="button" onclick="resetForm()">Reset Form</button>
+              </div>
+          </form>
+      </div>
+
+      <!-- The right column: results and chart sections-->
+      <div class="results-chart-wrapper">
+          <div class="results-box">
+              <h2>Results</h2>
+
+               <!-- Each paragraph shows one calculated output. Tooltips explain the value. -->
+              <p class="result-label">
+                  <span>
+                      Hours of Unplanned Downtime per year:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">Total unexpected downtime projected annually, calculated as monthly unplanned downtime hours × 12.</span>
+                      </span>
+                  </span>
+                  <span id="output1">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Average Industry cost of Downtime per year:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The estimated financial loss due to unplanned downtime, based on industry-average downtime costs and annual unplanned downtime hours.</span>
+                      </span>
+                  </span>
+                  <span id="output2">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Annual Cost of Unplanned Downtime:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The financial loss your facility incurs from unplanned downtime, calculated as your average cost of downtime per hour × annual unplanned downtime hours.</span>
+                      </span>
+                  </span>
+                  <span id="output3">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Cost of Planned Maintenance per hour:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The hourly cost of scheduled maintenance, calculated as (number of maintenance staff × their hourly cost) + average cost of downtime per hour.</span>
+                      </span>
+                  </span>
+                  <span id="output4">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Cost of Planned Maintenance per year:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The annual cost of scheduled maintenance, calculated as the cost of planned maintenance per hour × hours of planned downtime per month × 12.</span>
+                      </span>
+                  </span>
+                  <span id="output5">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Current Annual Maintenance Costs:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The total yearly maintenance cost, combining financial losses from unplanned downtime and costs of planned maintenance.</span>
+                      </span>
+                  </span>
+                  <span id="output6">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Annual Maintenance Costs with Predictive Maintenance:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The estimated annual maintenance cost after adopting predictive maintenance, assumed to be 70% of current costs due to improved efficiency.</span>
+                      </span>
+                  </span>
+                  <span id="output7">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Total Annual Financial Savings:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The financial savings achieved by adopting predictive maintenance, calculated as (unplanned downtime hours × maintenance type factor × downtime cost × 12) + 30% of current annual costs.</span>
+                      </span>
+                  </span>
+                  <span id="output8">0</span>
+              </p>
+
+              <p class="result-label">
+                  <span>
+                      Number of Hours Saved per Year:
+                      <span class="tooltip">
+                          <span class="tooltip-icon">i</span>
+                          <span class="tooltiptext">The total hours saved annually by reducing unplanned downtime through predictive maintenance, calculated as unplanned downtime hours × maintenance type factor × 12.</span>
+                      </span>
+                  </span>
+                  <span id="output9">0</span>
+              </p>
+          </div>
 
 
+          <!-- Cost comparison chart section -->
+          <div class="chart-container">
+              <h2>Annual Maintenance Cost Comparison</h2>
+               <!-- Canvas used for the Chart.js graph -->
+              <canvas id="costComparisonChart"></canvas>
+               <!-- Dynamic text showing percentage change -->
+              <p id="percentageDecrease" class="percentage-text">Percentage Decrease: 0%</p>
+          </div>
+      </div>
+  </main>
+
+    <!-- Footer with contact information -->
     <footer class="footer">
         <p><strong>Jakob San Juan</strong> | Student ID: 20289154 | Email: efyjs13@nottingham.ac.uk</p>
     </footer>
 
+    <!-- Link to my JavaScript functionality file -->
     <script src="script.js"></script>
 </body>
-
 </html>
-
-    
-
-

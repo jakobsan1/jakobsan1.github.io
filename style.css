@@ -1,195 +1,192 @@
-/* Main body style */
+/* ====== Base Body Styling ====== */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* White background */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Professional dark grey text */
+    font-family: 'Arial', sans-serif;  /* Sets a clean, readable font for the entire site */
+    background-color: #ffffff;       /* Gives the page a white background */
+    margin: 0;                         /* Removes default browser margin around the page */
+    padding: 0;                        /* Removes default padding */
+    color: #333;                     /* Sets default text colour to dark grey for readability */
 }
 
+/* ====== Main Title Banner ====== */
 #title {
-    background-color: #00274D; /* Dark blue title bar */
-    color: white;
-    margin: 0;
-    padding: 25px;
-    font-size: 28px;
-    text-align: center;
-    letter-spacing: 1px;
+    background-color: #00274D;       /* Dark blue background for emphasis */
+    color: white;                    /* Makes the title text white for contrast */
+    margin: 0;                         /* Removes spacing around the heading */
+    padding: 25px;                     /* Adds space inside the title container */
+    font-size: 28px;                   /* Makes the title text larger */
+    text-align: center;                /* Centres the heading text */
+    letter-spacing: 1px;               /* Slightly spaces out letters for clarity */
 }
 
-/* Centering the .header Section */
+/* ====== Header Section (Intro Text + Titles) ====== */
 .header {
-    max-width: 1200px; /* Set a max width to align with other content */
-    margin: 0 auto; /* Centers it horizontally */
-    text-align: left; /* Centers the text inside */
-    padding: 20px;
-    font-size: 21px;
+    max-width: 1350px;                /* Restricts the header content width */
+    margin: auto;                     /* Centres the section horizontally */
+    text-align: left;                 /* Aligns text to the left */
+    padding: 20px;                    /* Adds space around the header content */
+    font-size: 22px;                  /* Sets font size for general paragraph text */
+    line-height: 1.2;                 /* Controls vertical spacing between lines */
 }
 
-/* Ensuring Consistency with Other Sections */
 .header h1 {
-    font-size: 26px; /* Slightly larger heading for emphasis */
-    color: #00274D; /* Dark blue for contrast */
-    margin-bottom: 15px;
+    font-size: 26px;                  /* Slightly larger heading font */
+    color: #00274D;                 /* Matches the theme with dark blue colour */
+    margin-bottom: 15px;              /* Adds space below each header */
 }
 
 .header p {
-    font-size: 21px;
-    line-height: 1.6;
-    color: #333; /* Darker text for readability */
+    font-size: 21px;                  /* Consistent paragraph font size */
+    line-height: 1.6;                 /* More relaxed spacing for easier reading */
+    color: #333;                    /* Same dark grey as the body */
 }
 
-/* Spacing between points in the list */
 .header br {
-    display: block;
-    margin-bottom: 10px;
+    display: block;                   /* Ensures line breaks take up full width */
+    margin-bottom: 10px;              /* Adds spacing after each break */
 }
 
-
-/* Main Content - Flexbox for side-by-side layout */
+/* ====== Layout of Main Form and Results ====== */
 .main-container {
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;                    /* Uses flexbox for side-by-side layout */
+    justify-content: center;          /* Horizontally centres all child elements */
+    align-items: flex-start;          /* Aligns items to the top */
+    gap: 30px;                        /* Adds spacing between input form and results */
+    padding: 30px;                    /* Adds space around the entire section */
+    max-width: 1350px;                /* Restricts max width */
+    margin: 20px auto;                /* Adds vertical space and centres section */
 }
 
-/* Instructions and Expansion Section */
+/* ====== Instruction and Expansion Boxes ====== */
 .instructions-section, .expansion-section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;                      /* Adds spacing inside these boxes */
+    max-width: 1350px;                  /* Limits the width */
+    margin: 20px auto;                  /* Adds top and bottom margin and centres the section */
+    background-color: #f7f7f7;        /* Light grey background for separation */
+    border: 1px solid #ddd;           /* Light border for structure */
+    border-radius: 8px;                 /* Rounds the corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for a subtle lift effect */
 }
 
 .instructions-section h2, .expansion-section h2 {
-    font-size: 22px;
-    color: #00274D;
-    margin-bottom: 15px;
+    font-size: 22px;                  /* Heading size */
+    color: #00274D;                 /* Uses theme colour for headings */
+    margin-bottom: 15px;              /* Adds space below the heading */
 }
 
 .instructions-section p, .expansion-section p {
-    font-size: 16px;
-    margin: 10px 0;
-    line-height: 1.6;
+    font-size: 22px;                  /* Paragraph font size */
+    margin: 20px auto;                /* Centres and spaces out the text */
+    line-height: 1.3;                 /* Comfortable line spacing */
 }
 
-/* Main Content for Inputs and Results */
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 30px;
-    max-width: 1250px;
-    margin: 20px auto;
-}
-
-/* Styling for Input 1 Radiobox Selector */
-
+/* ====== Radio Button Maintenance Section ====== */
 .maintenance-fieldset {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    border-radius: 6px;
-  }
-  
-  .maintenance-legend {
-    font-weight: bold;
-    color: #00274D;
-    font-size: 16px;
-  }
-  
-  .maintenance-options {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-top: 10px;
-  }
-  
-  .maintenance-option {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .maintenance-label {
-    width: 250px;
-    font-weight: bold;
-    font-size: 16px;
-    white-space: nowrap;
-  }
-  
-  .maintenance-option input[type="radio"] {
-    width: 18px;
+    margin-bottom: 20px;              /* Adds space below the fieldset */
+    border: 1px solid #ccc;         /* Light grey border */
+    padding: 10px 15px;               /* Padding inside the box */
+    border-radius: 6px;               /* Rounded edges for a softer look */
+}
+
+.maintenance-legend {
+    font-weight: bold;                /* Bold title */
+    color: #00274D;                 /* Theme colour */
+    font-size: 18px;                  /* Slightly larger text */
+    display: inline-flex;             /* Allows icon to align inline */
+    align-items: center;              /* Vertically centres icon and text */
+    gap: 5px;                         /* Adds space between icon and label */
+}
+
+.maintenance-options {
+    display: flex;                    /* Flex layout for radio buttons */
+    flex-direction: column;           /* Stacks vertically */
+    gap: 16px;                        /* Adds space between options */
+    padding-top: 10px;                /* Spacing above radio options */
+}
+
+.maintenance-option {
+    display: flex;                   /* Flex to align label and input */
+    justify-content: space-between;  /* Pushes text left and radio button right */
+    align-items: center;             /* Aligns items vertically */
+}
+
+.maintenance-label {
+    width: 250px;                    /* Sets a fixed width for label */
+    font-weight: bold;               /* Makes the label stand out */
+    font-size: 18px;                 /* Increases font size for visibility */
+    white-space: nowrap;             /* Prevents the label from breaking into a new line */
+}
+
+.maintenance-option input[type="radio"] {
+    width: 18px;                     /* Size of radio button */
     height: 18px;
-    margin-left: 10px;
-  }
-  
-  
-  
-  
-
-/* Styling for Input 2 Dropdown Selector */
-select#input1 {
-    width: 100%;
-    padding: 16px;  /* Increased padding for a larger click area */
-    font-size: 18px;  /* Larger font for better readability */
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    appearance: none; /* Removes the default arrow styling (optional) */
-    height: 50px;  /* Ensures consistent height with input fields */
+    margin-left: 10px;               /* Space between label and input */
 }
 
-/* Styling for all input boxes (text and number inputs) */
-input[type="number"], select#input1 {
-    width: 100%;
+/* ====== General Input Field and Dropdown Styling ====== */
+input[type="number"],
+select#input2 {
+    width: 100%;                       /* Full width of container */
+    padding: 12px;                     /* Internal padding */
+    font-size: 18px;                   /* Larger font for better UX */
+    border: 1px solid #ddd;          /* Light border */
+    border-radius: 6px;                /* Soft corners */
+    background-color: #ffffff;       /* White input background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    margin-bottom: 15px;               /* Spacing under each input */
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Special layout for form inputs in calculator box */
+.calculator-box input[type="number"],
+.calculator-box select#input2 {
+    width: 90%;                       /* Slightly reduced width for spacing */
+    max-width: 100%;
+    padding: 10px;                    /* Inner space */
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inset for subtle inner border */
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Dropdown styles */
+select#input2 {
     padding: 12px;
-    font-size: px;
+    font-size: 18px;
     border: 1px solid #ddd;
     border-radius: 6px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    appearance: none;                /* Removes default arrow icon (optional custom styling) */
 }
 
-/* Hover effect for input boxes */
-input[type="number"]:hover, select#input1:hover {
-    border-color: #004085;
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+/* Input field hover and focus effects */
+input[type="number"]:hover,
+select#input2:hover {
+    border-color: #007BFF;           /* Highlights input border on hover */
+    background-color: #f0f8ff;       /* Slight blue tint to indicate focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Adds blue glow on hover */
 }
 
-/* Focus effect for input boxes (when the user clicks into them) */
-input[type="number"]:focus, select#input1:focus {
+input[type="number"]:focus,
+select#input2:focus {
     border-color: #007BFF;
     background-color: #ffffff;
-    outline: none; /* Removes the default blue outline */
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Blue outline when focused */
 }
 
-
-/* Existing styles for calculator-box and results-box */
-
-
-/* Calculator Box */
+/* ====== Calculator Box Container ====== */
 .calculator-box {
-    background: #ffffff;
+    background: #ffffff;             /* White background */
     padding: 20px;
     border-radius: 5px;
-    width: 35%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e1e1e1;
+    width: 40%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle lift */
+    border: 1px solid #e1e1e1;       /* Border to distinguish from background */
 }
 
 .calculator-box h2 {
@@ -198,13 +195,17 @@ input[type="number"]:focus, select#input1:focus {
     margin-bottom: 20px;
 }
 
+/* Input labels */
 label {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     margin: 10px 0 5px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 
+/* Input field base styling */
 input {
     width: 100%;
     padding: 10px;
@@ -214,6 +215,7 @@ input {
     font-size: 21px;
 }
 
+/* Button styles */
 button {
     background-color: #00274D;
     color: white;
@@ -228,78 +230,186 @@ button {
 }
 
 button:hover {
-    background-color: #004085;
+    background-color: #0267d3;
 }
 
-/* Adjusting the calculator input fields width */
-.calculator-box input[type="number"], 
-.calculator-box select#input1 {
-    width: 90%; /* Prevents input fields from exceeding the calculator box */
-    max-width: 100%; /* Ensures it never overflows */
-    padding: 10px; /* Keeps consistent spacing */
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #ffffff;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px; /* Adjusted margin for uniform spacing */
-    display: block; /* Ensures it takes proper width inside the box */
-}
-
-
-
-
-/* Styling for the Results Box */
+/* ====== Results Section Styling ====== */
 .results-box {
     background: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    width: 60%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #e1e1e1;
     text-align: left;
+    width: 95%;
 }
 
-/* Results Title */
 .results-box h2 {
     font-size: 24px;
-    color: #28a745;
+    color: #28a745;                   /* Green colour to imply success/savings */
     margin-bottom: 20px;
 }
 
-/* Styling for Each Result */
-.results-box p {
-    font-size: 16px; /* Larger text */
-    font-weight: bold; /* Bold for emphasis */
+.results-box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00274D;
+}
+
+.results-box span.output-green {
+    color: #28a745 !important;       /* Highlights positive values in green */
+}
+
+/* Format for each result line */
+.result-label {
+    font-size: 18px;
+    font-weight: bold;
     margin: 15px 0;
     padding-bottom: 8px;
     border-bottom: 1px solid #f1f1f1;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-/* Styling for the Output Values */
-.results-box span {
-    font-size: 20px; /* Bigger numbers */
-    font-weight: bold; /* Emphasized */
-    color: #00274D; /* Dark blue for contrast */
-}
-
-/* Footer Styling */
+/* ====== Footer Section ====== */
 .footer {
-    background-color: #00274D; /* Dark blue background */
+    background-color: #00274D;
     color: white;
     text-align: center;
     padding: 15px;
-    font-size: 16px;
-    position: relative; /* Keeps it at the bottom */
+    font-size: 18px;
+    position: relative;
     width: 100%;
     bottom: 0;
-    margin-top: 30px; /* Adds spacing above footer */
+    margin-top: 30px;
 }
 
-/* Make sure the footer text is readable */
 .footer p {
     margin: 0;
     font-weight: bold;
+}
+
+/* Button container layout */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    background-color: #00274D;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.button-group button:hover {
+    background-color: #004085;
+}
+
+/* ====== Results & Chart Container Layout ====== */
+.results-chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 750px;
+}
+
+/* Chart container box */
+.chart-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    width: 95%;
+}
+
+.chart-container h2 {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.chart-container canvas {
+    max-height: 300px;
+    width: 100%;
+}
+
+.percentage-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 15px;
+}
+
+/* ====== Tooltip Styling for Info Icons ====== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: #00274D;
+    color: #ffffff !important;
+    border-radius: 50%;
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+    border: 1px solid #dff3ff;
+}
+
+.tooltip-icon:hover {
+    background-color: #85bdf9;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #00274D;
+    color: #ffffff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 18px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #00274D transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
