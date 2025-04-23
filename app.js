@@ -10,7 +10,7 @@ let costChart = null; // This will store the chart so we can update it later if 
 function calculateROI() {
     // 1. Get the selected maintenance type (either Reactive or Preventive)
     const maintenanceType = document.querySelector('input[name="maintenanceType"]:checked');
-    let input1 = maintenanceType ? (maintenanceType.value === "Reactive" ? 0.485 : 0.185) : 0;
+    let input1 = maintenanceType ? (maintenanceType.value === "Reactive" ? 0.35 : 0.185) : 0;
 
     // 2. Get all the numerical values the user typed or selected
     const input2 = parseFloat(document.getElementById('input2').value) || 0;  // Industry average cost of downtime
@@ -29,7 +29,7 @@ function calculateROI() {
     const output2 = input2 * output1;  // Industry cost of unplanned downtime
     const output3 = input3 * input6 * 12;  // Your actual cost of unplanned downtime
     const output4 = (input8 * input9) + input3;  // Planned maintenance cost per hour
-    const output5 = output4 * input4 * 12;  // Planned maintenance cost per year
+    const output5 = output4 * input5 * 12;  // Planned maintenance cost per year
     const output6 = output3 + output5;  // Total current annual maintenance costs
     const output7 = output6 * 0.75;  // Estimated cost after using predictive maintenance
     const output8 = (input6 * input1 * input3 * 12) + (output6 * 0.25); // Total annual financial savings
